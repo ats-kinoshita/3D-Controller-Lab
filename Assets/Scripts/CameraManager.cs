@@ -20,12 +20,12 @@ public class CameraManager : MonoBehaviour
     public float cameraFollowSpeed = 0.2f;
     public float cameraLookSpeed = 14f;
     public float cameraPivotSpeed = 14f;
-    public float cameraLookSmoothTime = 1f;
+    public float cameraLookSmoothTime = 2f;
     
     public float lookAngle; // Camera looking up and down
     public float pivotAngle; // Camera looding left and right
-    public float minPivotAngle = -35f;
-    public float maxPivotAngle = 35f;
+    public float minPivotAngle = -70f;
+    public float maxPivotAngle = 70f;
 
     private void Awake()
     {

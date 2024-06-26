@@ -983,6 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d72d58750cdfc42a1966bd6fa82d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracting: 1
 --- !u!114 &814773227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,7 +996,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a748b82f8fdba7746a55145747f36794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 7
+  inAirTimer: 0
+  leapingVelocity: 3
+  fallingVelocity: 33
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  rayCastOriginHeightOffset: 0.5
+  isSprinting: 0
+  isWalking: 0
+  isGrounded: 1
+  walkingSpeed: 2.5
+  runningSpeed: 5
+  sprintingSpeed: 10
   rotationSpeed: 14
 --- !u!114 &814773228
 MonoBehaviour:
@@ -1011,10 +1024,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementInput: {x: 0, y: 0}
   cameraInput: {x: 0, y: 0}
+  moveAmount: 0
   verticalInput: 0
   horizontalInput: 0
   cameraInputX: 0
   cameraInputY: 0
+  shift_Input: 0
+  ctrl_Input: 0
 --- !u!136 &814773229
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1268,11 +1284,11 @@ MonoBehaviour:
   cameraFollowSpeed: 0.2
   cameraLookSpeed: 14
   cameraPivotSpeed: 14
-  cameraLookSmoothTime: 1
+  cameraLookSmoothTime: 2
   lookAngle: 0
   pivotAngle: 0
-  minPivotAngle: -35
-  maxPivotAngle: 35
+  minPivotAngle: -70
+  maxPivotAngle: 70
 --- !u!4 &1525483522
 Transform:
   m_ObjectHideFlags: 0
